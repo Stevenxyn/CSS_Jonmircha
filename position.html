@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/position.css">
+    <title>Posicionamiento en CSS</title>
+</head>
+<body>
+   <h1>Posicionamiento en CSS</h1> 
+   <p>La propiedad FLOAT y Position nos permite modificar la posicion natural de cualquierelemento del HTML</p>
+   <p>El navegador coloca cada elemento teniendo en cuenta el orden en el que va apareciendo en el documento HTML, y su tipo de visualizacion si es un elemento en linea o de bloque</p>   
+   <p>Con Float y Position podremos modificar este comportamiento</p> 
+
+   <h2>Elementos flotantes</h2>
+   <ol>
+       <li>
+        Float: Convierte un elemento en flotante desplazandolo hasta la zona mas a la izquierda o mas a la derecha
+        de la posicion en la que originalmente se encuentra
+        </li>
+       <li>Clear: Limppia la flotacion (left, right, both)  </li>
+   </ol>
+   <h2>Tipos de Posicionamiento</h2>
+   <ol>
+       <li>Static (default)</li>
+       <li>relative</li>
+       <li>absolute</li>
+       <li>fixed</li>
+       <li>sticky</li>
+   </ol>
+   <h2>Para mover los elementos posicionados se activan las siguientes propiedades:</h2>
+   <ul>
+       <li>top (vertical- eje Y)</li>
+       <li>bottom (vertical- eje Y)</li>
+       <li>left (Horizontal - eje X)</li>
+       <li>right (horizontal - eje X</li>
+       <li>z-index (profundidad - eje Z)</li>
+   </ul>
+   <p>Las propiedades top y left van a tener preferencia sobre bottom y right respectivamente</p>
+   <p>Estás 5 pripiedades no funcionan con el valor static</p>
+   <br>
+   <div class="static">Caja estatica!</div>
+   <div class="relative">Caja relativa</div>
+   <div class="absolute">caja absoluta</div>
+   <div class="padre">
+       <article class="hijo">
+           hijo
+       </article>
+   </div>
+   <div class="fixed"><a href="index.html" target="_blank">🐱‍🏍</a></div>
+   <div class="sticky">Caja pegajosa</div>
+
+   <section class="sticky-parent">
+    <div class="sticky-child">
+        caja pegajosa hijo
+    </div>
+   </section>
+   <div class="z-index-1">probando z-index caja 1</div>
+   <div class="z-index-2">probando z-index caja 2</div>
+   <section class="z-index-parent">
+       <div class="z-index-child">
+           hijo z-index
+       </div>
+   </section>
+
+   <a href="index.html" target="_selft">&#x261D;</a>   
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html> 

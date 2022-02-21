@@ -1,0 +1,228 @@
+html {
+    box-sizing: border-box;
+    }
+*, 
+*:before, 
+*:after {
+box-sizing: inherit;
+}
+
+html{
+  scroll-behavior: smooth;  
+}
+
+/* 
+La propiedad FLOAT y Position nos permite modificar la posicion natural de cualquier
+elemento del HTML
+
+El navegador coloca cada elemento teniendo en cuenta el orden en el que va apareciendo en el documento
+HTML, y su tipo de visualizacion si es un elemento en linea o de bloque
+
+Con Float y Position podremos modificar este comportamiento
+
+Elementos Flotantes
+    Float: Convierte un elemento en flotante desplazandolo hasta la zona mas a la izquierda o mas a la derecha
+    de la posicion en la que originalmente se encuentra
+    Clear: Limppia la flotacion (left, right, both)
+
+Tipos de posicionamiento
+    static (default)
+    relative
+    absolute
+    fixed
+    sticky
+
+Las propiedades top y left van a tener preferencia sobre bottom y right
+respectivamente
+
+Estás 5 pripiedades no funcionan con el valor static
+*/
+
+/* 
+static: Es el valor por defecto, significa que el elemento respetta el flujo del documento HTML,
+por lo que no se puede mover ni posicionar
+*/
+
+.static{
+    background-color: tomato;
+    position: static;
+    top: 50px;
+    left: 500px;
+}
+
+/* 
+relative: hace que el elemento conserve sus dimensiones y posicion original en el flujo del documento
+si se mueve toma como referencia su posicion original
+
+aun mantiene el posicionamiento inicial con las dimiensiones asi no este en el mismo
+*/
+
+.relative{
+    box-shadow: 5px 10px 15px;
+    background-color: turquoise;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    /* top: 100px;
+    left: 50px; */
+    right: 50px;
+    bottom: 50px;
+    top: -20px;
+    left: 500px;
+}
+
+/* 
+absolute: el elemento pierde sus dimensiones y posicion original en el flujo dle documento,
+si se mueve puede tomar como referencia dos elementos
+1) El primer ancestro con posicionamiento relativo
+2)si no cuenta con un ancestro relavito se mueve respecto al HTML
+*/
+
+
+/* 2) */
+.absolute{
+    background-color: violet;
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    /* top: 0;
+    left: 0; */
+    right: 0;
+    bottom: 0;
+}
+
+/*
+1)
+*/
+
+.padre{
+    background-color: yellow;
+    position: relative;
+    width: 300px;
+    height: 50px;
+}
+
+.hijo{
+    background-color: aqua;
+    position: absolute;
+    /* left: 0px;
+    right: 0px; */
+    bottom: 0px;
+    top: 0px;
+}
+
+/* 
+fixed: el elemento pierde sus dimensiones y posicion original en el flujo del documento.
+si se mueve toma como referencia el documento html y queda fijo en la posicion, cuando se hace scroll
+se mueva el elemento no lo hara, ya que quedara FIJO!
+*/
+
+.fixed a{
+    position: fixed;
+    background-color: rgb(14, 238, 208);
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.fixed a:hover{
+    background-color: rgb(141, 21, 181);
+    transition: 1s ;
+    padding: 15px;
+}
+
+/* 
+sticky: Es una combinacion de posicionamiento relative y fixed para este posicionamiento
+las propiedasdes de top , left , bottom y right no mueven el elemento,
+sirven como un punto de referencia mientras no lleguen a ese valor el elemento se comporta relative, 
+cuando llega se convierte en fixed.
+
+Para que este comportamiento funcione sticky debe ser hijo del body o su elemento contenedor debe tener dimensiones definidas
+y solo sera sticky dentro de las dimensiones de su contenedor padre.
+*/
+
+
+/* 
+deja la caja fija cuando se baja dependiendo cuanto le dejamos de espaciado 
+*/
+.sticky{
+    background-color: peru;
+    position: sticky;
+    top: 50px;
+}
+
+.sticky-parent{
+    border:thick dashed black ;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    height: 600px;
+}
+
+/* 
+Mira cuando tiene un padre el cual no es body se le aplican las dimensiones al padre, y exclusivamente
+aplicara el sticky dentro del padre una vez terminen las dimensiones se queda pegado en la parte final
+de las dimensiones que dimos 
+*/
+.sticky-child{
+    background-color: lightslategray;
+    position: sticky;
+    top: 70px
+}
+
+/* 
+z-index:  propiedad que permite controlar la profundidad de los elementos posicionados,
+su valor por defecto es auto acepta positivos, negativos y cero
+
+a mayor valor el elemento esta mas al frente a menor valor mas al fondo
+
+un elemento padre nunca podra estar sobre sus elementos hijos, sin embargo los elementos
+hijos si pueden dandoles un valor negativo y que el elemento padre no tenga definido
+valor de z-index
+
+
+
+*/
+
+.z-index-1,
+.z-index-2{
+    background-color: midnightblue;
+    border: thin solid red;
+    width: 200px;
+    height: 200px;
+    color: white;
+    position: relative;
+}
+
+.z-index-1{
+    z-index: 2;
+}
+
+.z-index-2{
+    top: -150px;
+    left: 20px;
+    z-index: 3;
+    z-index: -5;
+}
+
+.z-index-parent{
+    background-color: yellowgreen;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    /* z-index: 3; */
+}
+
+.z-index-child{
+    background-color: violet;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: -75px;
+    left: 75px;
+    z-index: -1;
+}

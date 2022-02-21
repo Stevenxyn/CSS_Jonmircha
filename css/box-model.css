@@ -1,0 +1,267 @@
+/*
+Modelo de caja: Es la forma que CSS ve a los elemntos en HTML los ve de la forma de cajas con las
+siguientes propiedades: 
+
+1.Contenido (Content): El contenido en su mayor parte texto del elemento HTML tomando en cuenta
+las dimensiones Width & Height / alto anchura
+2.Relleno (Padding): distancias internas (Distancia del borde al contenido)
+3.Borde (Border): Lo que delimita cada uno de los elementos en HTML
+4.Margen (margin): Son las distancias externas 
+(Distancias entre el elemento HTML y sus elementos hermanos o padres)
+
+
+Dentro del modelo de caja se considera que tiene 4 lados, manecillas del reloj:
+1.Arriba (top)
+2.Derecha (right)
+3.Abajo (Bottom)
+4.Izquierda (Left)
+*/
+html {
+    box-sizing: border-box;
+    }
+*, 
+*:before, 
+*:after {
+box-sizing: inherit;
+}
+
+h1{
+    border-width: medium;/*thin - 1px, medium - 3px, thick - 5px*/
+    width: 300px; /*Anchura*/
+    height: 200px; /*Altura*/
+    /*Si quiero aplicar 3 propiedades en una sola se hace asi
+    5px bordes / dashed la linea como la queremos / red color
+    */
+    border:5px dashed red;
+}
+
+
+/*
+valores al ocupar margin y padding dependiendo donde queremos tales estilos
+2.top > bottom
+3.top > left > right
+4.top > right > bottom > left
+
+*/
+
+.caja-uno,
+.caja-dos{
+    background-color: sandybrown;
+    border: medium solid black;
+    padding: 10px;
+    margin:50px 0;
+}
+
+
+.caja-linea,
+.caja-bloque{
+    background-color: rgb(11, 173, 184);
+    border:medium solid black;
+    height: 200px;
+    width: 350px;
+    padding: 16px;
+}
+
+.caja-linea{
+    margin: 36px;
+    margin-bottom: 5000px;
+}
+
+.caja-bloque{
+    margin: 36px;
+}
+
+/* No aplica height y width dimensiones a este tipo de cajas
+Caja de linea
+
+-ocupan el espacio necesario para mostrar su contenido
+width 
+height
+-no tienen dimensiones modificables (height, width)
+-permiten otros elementos a su lado
+-paddin y margin solo empujan a elementos adyacentes en horizontal, nunca vertical
+
+*/
+.element-line{ 
+    border: medium solid black;
+    height: 1000px;
+    width: 2000px;
+    padding: 10px ;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 100px;
+    margin-bottom: 500px;
+}
+
+/* SOLAMENTE TOMA MARGIN HORITONZALES VERTICALES LOS IGNORA! DE IGUAL FORMA PARA PADDING */
+.element-line-two{
+    border: thin solid black;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+/* Elementos en bloque:
+Caja de bloque
+- ocupan todo el ancho disponible, lo que genera saltos de linea
+- tienen dimensiones modificables (width, height)
+-no permiten que otros elementos esten a su lado, aunque especifiquen su ancho, siguen ocupando todo el ancho disponible
+a lo ancho generando saltos de lineas 
+*/
+
+.element-bloque{
+    border:thick dotted red;
+    height: 50px;
+    width: 150px;
+    padding: 50px 50px 50px 100px;
+}
+
+.element-bloque-two{
+    border:medium double grey ;
+    height: 200px;
+    width: 150px;
+    margin: 50px 50px 50px 50px;
+}
+
+
+/*Propiedad Display */
+
+.caja-none,
+.caja-linea-bloque,
+.caja-hidden{
+    background-color: hotpink;
+    color: wheat;
+    height: 300px;
+    width: 600px;
+    border: thick solid black;
+} 
+
+/* Dota a la caja de linea con propiedades de bloque */
+.caja-linea-bloque{
+    display: inline-block;
+}
+
+/* Se ocupa para ocultar pero OJO aun se sigue viendo en inspeccionar elementos */
+.caja-none{
+    display: none;
+}
+
+/*VISIBILITY Quita el elemento manteniendo las dimensiones */
+.caja-hidden{
+    visibility: hidden;
+}
+
+/* Propiedad Overflow */
+
+.overflow{
+    background-color: cornflowerblue;
+    width: 250px;
+    height: 100px;
+    overflow: auto;
+    border-radius: 5px;
+    border-style:solid;
+    border-color: rgb(142, 182, 32);
+}
+
+
+/* 
+Tamaño de Caja
+*/
+
+.box-sizing-content{
+    background-color: cyan;
+    width: 250px;
+}
+
+.caja-principal{
+    background-color: darkorchid;
+    width: 600px;
+    height: 200px;
+}
+
+/* 
+.caja-principal > *{
+    width: 200px;
+    float: left;
+} */
+
+
+.list-items{
+    width: 200px;
+    float: left;
+    border: thin solid red;
+    padding:10px;
+}
+
+/* Floats */
+
+.container-floats{
+    background-color: royalblue;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+/* Limpia y organiza el texto que no es flotante dejando a los flotantes en este
+ caso 2 a los lados */
+.clear-fix{
+    clear: both;
+}
+
+.margin-colapse{
+    background-color:skyblue;    
+}
+
+/* ocupar margin solo top o bottom ya que en la mitad se unifican pero no suman para espaciar */
+.margin-colapse section{
+    border:thin solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* En las cajas en linea no se colapsa los margenes a comparacion de la anterior ya que aca si se unifican y suman de mas
+    cuando se le pone display inline block
+    tener en cuenta
+*/
+.margin-colapse span{
+    border:thin solid black;
+    display: inline-block;
+    margin-right:16px;
+    margin-left: 50px;
+}
+
+/* Centrado de cajas
+    No ocupar margin: 0 auto;
+    ya que eso nos resetea todo perdiendo acoplamiento de otras areas
+    de la pagina
+*/
+
+.sitio-web{
+    border: thin solid rgb(41, 26, 10);
+    background-color: rgb(18, 20, 22);
+    height: 500px;
+    width: 1000px;
+    padding: 16px;
+    margin-left: auto;
+    margin-right:auto ;
+    /* margin: 0 auto; */
+    color: white;
+    font-family: sans-serif;
+}
+
+.sitio-web header h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.subtitu{
+    font-size: 30px;
+    font-weight: bold;
+   
+
+}

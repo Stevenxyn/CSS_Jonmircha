@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/box-model.css">
+    <title>Modelo de Caja en CSS</title>
+</head>
+<body>
+    <a href="https://cssreference.io/" target="_blank"><h1>Super guia CSS!!</h1></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nam non, quibusdam cumque eos at!</p>
+    <hr>
+    <h2>Margin & padding</h2>
+    <p>Los divs por defecto vienen sin estilos ya que el user agent no le aplica nada de modelo de caja</p>
+    <div class="caja-uno">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, maxime molestiae quisquam, reiciendis minus repudiandae voluptatum eaque ipsum possimus quo odio itaque expedita deserunt, maiores adipisci corporis quaerat vero quos.</div>
+    <div class="caja-dos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, tempora a molestiae laudantium magnam laboriosam officiis adipisci aliquam necessitatibus cum minima dignissimos fuga velit dicta commodi cupiditate odit et recusandae!</div>
+    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Inline_elements" target="_blank"><h2>Elementos en linea</h2></a>
+    <ol class="etiquetas-linea-ejemplos">
+        <li><b>Span</b></li>
+        <li><b>B</b></li>
+        <li><b>Buttom</b></li>
+        <li><b>img</b></li>
+        <li><b>textarea</b></li>
+        <li><b>input</b></li>
+        <li><b>label</b></li>
+        <li><b>br</b></li>
+        <li><b>i</b></li>
+        <li><b>a</b></li>
+    </ol>
+    <p>Elementos en linea, SOLAMENTE TOMA MARGIN HORITONZALES VERTICALES LOS IGNORA! DE IGUAL FORMA PARA PADDING </p>
+    <b class="element-line">Linea</b>
+    <b class="element-line-two">Linea</b>
+
+    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements#elementos" target="_blank"><h2>Elementos en bloque</h2></a>
+    <ul>
+        <li><b>address</b></li>
+        <li><b>article</b></li>
+        <li><b>aside</b></li>
+        <li><b>blockquote</b></li>
+        <li><b>dd</b></li>
+        <li><b>div</b></li>
+        <li><b>footer</b></li>
+        <li><b>h1 al h6</b></li>
+        <li><b>p</b></li>
+        <li><b>ol,ul,li,hr,nav</b></li>
+    </ul>
+    <article class="element-bloque">En Bloque</article>
+    <article class="element-bloque-two">En bloque</article>
+    <hr>
+    <h2>Cajas en Linea VS Cajas en Bloque</h2>
+    <span class="caja-linea">Esto es una caja en Linea</span>
+    <span>Esto es un span</span>
+    <div class="caja-bloque">Esto es una caja en Bloque</div>
+    <hr>
+    <h2>Propiedad Display</h2>
+    <ol>
+        <li>inline</li>
+        <li>block</li>
+        <li>inline-block : Se comporta como un elemento en linea pero acepta modificar sus dimensiones (alto , ancho)</li>
+        <li>none</li>
+        <li>table</li>
+        <li>list-item</li>
+        <li>flexbox CSS</li>
+        <li>Grid CSS</li>
+    </ol>
+    <br>
+    <div class="caja-none">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae labore iste necessitatibus numquam eius odit assumenda eaque magnam quas saepe similique eos dolorum, quo rerum, ducimus in iure. Ut, et?
+    </div>
+    <span class="caja-linea-bloque">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis repellendus veritatis distinctio quo quas accusantium, sed explicabo beatae accusamus impedit deserunt dolorem delectus consectetur quae perferendis atque assumenda harum ab!
+    </span>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor magnam dignissimos quibusdam corrupti illo placeat, nulla tempore alias ab consequuntur fuga facere! Recusandae esse ipsam animi fuga labore cum repudiandae.
+    </p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+    <ol>
+        <li>item 5</li>
+        <li>item 5</li>
+        <li>item 5</li>
+        <li>item 5</li>
+    </ol>
+    <hr>
+    <h2>Propiedad visibility</h2>
+    <p>
+        Esconde el elemento PERO guarda el espacio que ella mantenia anteriormente, cuenta con estos valores
+        <ol>
+            <li>visible: muestra</li>
+            <li>hidden: oculta</li>
+        </ol>
+    </p>
+    <div class="caja-none">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae labore iste necessitatibus numquam eius odit assumenda eaque magnam quas saepe similique eos dolorum, quo rerum, ducimus in iure. Ut, et?
+    </div>
+    <div class="caja-hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae labore iste necessitatibus numquam eius odit assumenda eaque magnam quas saepe similique eos dolorum, quo rerum, ducimus in iure. Ut, et?
+    </div>
+    <hr>
+    <a href="https://cssreference.io/property/overflow/" target="_blank"><h2>Propiedad Overflow</h2></a>
+    <p class="overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum asperiores facere tempora molestiae quas dolorum vitae ipsa aliquid nobis est illum reprehenderit ipsam veritatis dolores corporis, sed voluptates rem natus?
+    </p>
+    <hr>
+    <a href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank"><h2>Modelo de cajas</h2></a>
+    <div class="box-sizing-content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis a similique voluptatem cumque expedita, quos neque ipsa consequuntur amet dignissimos libero tenetur accusamus architecto aperiam porro, harum, aspernatur eligendi. Quasi.
+    </div>
+    <p>apply a natural box layout model to all elements, but allowing components to change</p>
+    <code><b>
+        html {
+        box-sizing: border-box;
+        }
+        *, 
+        *:before, 
+        *:after {
+        box-sizing: inherit;
+        }
+    </b></code>
+    <p>Se recomienda ocupar el codigo anterior al inicio del CSS ya que empieza a contar los bordes y padding de las cajas </p>
+    <div class="caja-principal">
+        <article class="list-items">Items 1</article>
+        <article class="list-items">Items 2</article>
+        <article class="list-items">Items 3</article>
+    </div>
+    <hr>
+    <a href="https://cssreference.io/property/float/" target="_blank"><h2>Propiedad Float & Clear</h2></a>
+     <article class="container-floats">
+        <section class="float-right">Este es un elemento flotante a la derecha</section>
+        <section class="float-left">Elemento flotante a la izquierda</section>
+        <section class="clear-fix">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ipsa quae odio et molestias harum magnam porro, iusto velit dolor temporibus explicabo, quam molestiae id facere praesentium esse sed sunt!</section>
+     </article>
+     <section class="clear-fix">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ipsa quae odio et molestias harum magnam porro, iusto velit dolor temporibus explicabo, quam molestiae id facere praesentium esse sed sunt!</section>
+     <hr>
+     <h2>Colapso de Margenes Horizontales</h2>
+     <article class="margin-colapse">
+        <section>Primera</section>
+        <section>Segunda</section>
+        <section><span>span1</span><span>span2</span><span>span3</span></section>
+     </article>
+     <hr>
+     <h2>Centrado de Cajas</h2>
+    <section class="sitio-web">
+        <header>
+            <h2>Bienvenidos</h2>
+            <p>
+               <span class="subtitu">Bienvenidos</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia vitae sequi, non est quas, facere modi assumenda consequatur voluptates debitis, commodi nemo? Cum nisi accusantium pariatur voluptas eos quis porro quia, possimus commodi! Facilis voluptatum voluptatibus perspiciatis reprehenderit cumque rerum blanditiis laboriosam similique in aspernatur.
+            </p>
+        </header>
+        <main>
+            
+        </main>
+        <footer>Pie de pagina</footer>
+    </section>
+
+
+
+    <a href="index.html#inicio-suave" target="_blank" id="inicio-suave">&#x261D;</a>   
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    
+</body>
+</html>
